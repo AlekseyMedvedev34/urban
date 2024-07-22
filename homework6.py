@@ -17,7 +17,7 @@ print({'Mark'})
 print( my_dict.get('Mark'))
 print( my_dict.get('Petr'))
 
-del my_dict['Mark']
+my_dict = my_dict.pop('Mark') # исправил код, удалил del.
 print(my_dict)
 
 my_set = {1, 2, 3, 5, 5, 6, 2, 'Яблоко',(3, 2, 7, 9)}
