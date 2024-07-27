@@ -6,13 +6,13 @@ not_primes = []
 for num in numbers:
     if num == 1:
         continue
-    is_prime = True
+    is_primes = True
 
     for i in range( 2, num ):
         if num % i == 0:
             is_primes = False
             break
-    if is_prime:
+    if is_primes:
         primes.append( num )
     else:
         not_primes.append( num )
