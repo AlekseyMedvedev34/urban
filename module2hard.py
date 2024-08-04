@@ -18,19 +18,26 @@
 # 20 - 13141911923282183731746416515614713812911
 
 # num = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-import random
+test_code = {
+    3: 12,
+    4: 31,
+    5: 14,
+    6: 42,
+    7: 52,
+    8: 53,
+    9: 63}
+
 
 def gen_code(num):
-    result = ""
-    for i in range(i, num):
-        for j in range( i + 1,num):
+    code = ""
+    for i in range( 1, num ):
+        for j in range( i + 1, num ):
             if num % (i + j) == 0:
                 code += f'{i}{j}'
-
     return code
 
-num = random.randint (i: 3, j: 20)
 
-gen_code(num)
+for num in range( 3, 10 ):
+    code = gen_code( num )
 
-print(f'{num} - {cod}')
+print( f'{num} - {code} - {test_code[num]} - {code == str( test_code[num] )}' )
