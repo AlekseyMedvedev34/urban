@@ -2,6 +2,7 @@
 class Animal:
     alive = True
     fed = False
+    eat = True
     def __init__(self, name):
         self.name = name
 
