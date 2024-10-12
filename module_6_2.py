@@ -33,14 +33,11 @@ class Vehicle:
 class Sedan( Vehicle ):
     __PASSANGERS_LIMIT_ = 5
 
-    def __init__(self, owner: str, model: str, engine_power: int, color: str):
+     def get_passangers_limit(self):
+        return f'Лимит позажиров: {Sedan.__PASSANGERS_LIMIT_}'
         super().__init__( owner, model, engine_power, color )
 
-
-    def get_passangers_limit(self):
-        return f'Лимит позажиров: {Sedan.__PASSANGERS_LIMIT_}'
-
-
+   
 car = Sedan( "Иван", "Toyota Camry", 150, "blue" )
 car.print_info()
 
